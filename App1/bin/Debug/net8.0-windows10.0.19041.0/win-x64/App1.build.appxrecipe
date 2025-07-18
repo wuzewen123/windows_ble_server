@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>PCAI</Machine>
+    <WindowsUser>chenh</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <TargetOsVersion>10.0</TargetOsVersion>
+    <TargetOsDescription>Windows 10.0</TargetOsDescription>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>x64</PackageArchitecture>
+    <PackageIdentityName>c1bee580-46c2-48cd-8050-a80823d28ba9</PackageIdentityName>
+    <PackageIdentityPublisher>CN=wzwen</PackageIdentityPublisher>
+    <IntermediateOutputPath>D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\obj\Debug\net8.0-windows10.0.19041.0\win-x64\</IntermediateOutputPath>
+    <RemoteDeploymentType>CopyToDevice</RemoteDeploymentType>
+    <PackageRegistrationPath></PackageRegistrationPath>
+    <RemoveNonLayoutFiles>false</RemoveNonLayoutFiles>
+    <DeployOptionalPackages>false</DeployOptionalPackages>
+    <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
+    <LayoutDir>D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\bin\Debug\net8.0-windows10.0.19041.0\win-x64\AppX</LayoutDir>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\bin\Debug\net8.0-windows10.0.19041.0\win-x64\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\bin\Debug\net8.0-windows10.0.19041.0\win-x64\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\bin\Debug\net8.0-windows10.0.19041.0\win-x64\App1.runtimeconfig.json">
+      <PackagePath>App1.runtimeconfig.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\bin\Debug\net8.0-windows10.0.19041.0\win-x64\App1.dll">
+      <PackagePath>App1.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\obj\Debug\net8.0-windows10.0.19041.0\win-x64\apphost.exe">
+      <PackagePath>App1.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.57\lib\net8.0\Microsoft.Windows.SDK.NET.dll">
+      <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.windows.sdk.net.ref\10.0.19041.57\lib\net8.0\WinRT.Runtime.dll">
+      <PackagePath>WinRT.Runtime.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\ffmpeg.autogen\7.1.1\lib\netstandard2.1\FFmpeg.AutoGen.dll">
+      <PackagePath>FFmpeg.AutoGen.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\ffmpegcore\5.2.0\lib\netstandard2.0\FFMpegCore.dll">
+      <PackagePath>FFMpegCore.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\instances\3.0.1\lib\netstandard2.0\Instances.dll">
+      <PackagePath>Instances.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.windowsappsdk\1.7.250606001\lib\net6.0-windows10.0.18362.0\Microsoft.Graphics.Imaging.Projection.dll">
+      <PackagePath>Microsoft.Graphics.Imaging.Projection.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.windowsappsdk\1.7.250606001\lib\net6.0-windows10.0.18362.0\Microsoft.InteractiveExperiences.Projection.dll">
+      <PackagePath>Microsoft.InteractiveExperiences.Projection.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.windowsappsdk\1.7.250606001\lib\net6.0-windows10.0.18362.0\Microsoft.Security.Authentication.OAuth.Projection.dll">
+      <PackagePath>Microsoft.Security.Authentication.OAuth.Projection.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.windowsappsdk\1.7.250606001\lib\net6.0-windows10.0.18362.0\Microsoft.WinUI.dll">
+      <PackagePath>Microsoft.WinUI.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.windowsappsdk\1.7.250606001\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.AI.ContentSafety.Projection.dll">
+      <PackagePath>Microsoft.Windows.AI.ContentSafety.Projection.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.windowsappsdk\1.7.250606001\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.AI.Imaging.Projection.dll">
+      <PackagePath>Microsoft.Windows.AI.Imaging.Projection.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.windowsappsdk\1.7.250606001\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.AI.Projection.dll">
+      <PackagePath>Microsoft.Windows.AI.Projection.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.windowsappsdk\1.7.250606001\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.AI.Text.Projection.dll">
+      <PackagePath>Microsoft.Windows.AI.Text.Projection.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.windowsappsdk\1.7.250606001\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.AppLifecycle.Projection.dll">
+      <PackagePath>Microsoft.Windows.AppLifecycle.Projection.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.windowsappsdk\1.7.250606001\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.AppNotifications.Builder.Projection.dll">
+      <PackagePath>Microsoft.Windows.AppNotifications.Builder.Projection.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.windowsappsdk\1.7.250606001\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.AppNotifications.Projection.dll">
+      <PackagePath>Microsoft.Windows.AppNotifications.Projection.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.windowsappsdk\1.7.250606001\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.ApplicationModel.Background.Projection.dll">
+      <PackagePath>Microsoft.Windows.ApplicationModel.Background.Projection.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.windowsappsdk\1.7.250606001\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.ApplicationModel.DynamicDependency.Projection.dll">
+      <PackagePath>Microsoft.Windows.ApplicationModel.DynamicDependency.Projection.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.windowsappsdk\1.7.250606001\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.ApplicationModel.Resources.Projection.dll">
+      <PackagePath>Microsoft.Windows.ApplicationModel.Resources.Projection.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.windowsappsdk\1.7.250606001\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.ApplicationModel.WindowsAppRuntime.Projection.dll">
+      <PackagePath>Microsoft.Windows.ApplicationModel.WindowsAppRuntime.Projection.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.windowsappsdk\1.7.250606001\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.BadgeNotifications.Projection.dll">
+      <PackagePath>Microsoft.Windows.BadgeNotifications.Projection.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.windowsappsdk\1.7.250606001\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.Management.Deployment.Projection.dll">
+      <PackagePath>Microsoft.Windows.Management.Deployment.Projection.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.windowsappsdk\1.7.250606001\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.Media.Capture.Projection.dll">
+      <PackagePath>Microsoft.Windows.Media.Capture.Projection.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.windowsappsdk\1.7.250606001\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.PushNotifications.Projection.dll">
+      <PackagePath>Microsoft.Windows.PushNotifications.Projection.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.windowsappsdk\1.7.250606001\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.Security.AccessControl.Projection.dll">
+      <PackagePath>Microsoft.Windows.Security.AccessControl.Projection.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.windowsappsdk\1.7.250606001\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.Storage.Projection.dll">
+      <PackagePath>Microsoft.Windows.Storage.Projection.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.windowsappsdk\1.7.250606001\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.System.Power.Projection.dll">
+      <PackagePath>Microsoft.Windows.System.Power.Projection.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.windowsappsdk\1.7.250606001\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.System.Projection.dll">
+      <PackagePath>Microsoft.Windows.System.Projection.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.windowsappsdk\1.7.250606001\lib\net6.0-windows10.0.18362.0\Microsoft.Windows.Widgets.Projection.dll">
+      <PackagePath>Microsoft.Windows.Widgets.Projection.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.windowsappsdk\1.7.250606001\lib\net6.0-windows10.0.18362.0\Microsoft.WindowsAppRuntime.Bootstrap.Net.dll">
+      <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.Net.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\system.io.pipelines\9.0.2\lib\net8.0\System.IO.Pipelines.dll">
+      <PackagePath>System.IO.Pipelines.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\system.text.encodings.web\9.0.2\lib\net8.0\System.Text.Encodings.Web.dll">
+      <PackagePath>System.Text.Encodings.Web.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\system.text.json\9.0.2\lib\net8.0\System.Text.Json.dll">
+      <PackagePath>System.Text.Json.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.web.webview2\1.0.2903.40\runtimes\win-x64\native\WebView2Loader.dll">
+      <PackagePath>WebView2Loader.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.windowsappsdk\1.7.250606001\runtimes\win-x64\native\Microsoft.Windows.ApplicationModel.Background.UniversalBGTask.dll">
+      <PackagePath>Microsoft.Windows.ApplicationModel.Background.UniversalBGTask.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.windowsappsdk\1.7.250606001\runtimes\win-x64\native\Microsoft.WindowsAppRuntime.Bootstrap.dll">
+      <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.web.webview2\1.0.2903.40\runtimes\win-x64\native_uap\Microsoft.Web.WebView2.Core.dll">
+      <PackagePath>Microsoft.Web.WebView2.Core.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.web.webview2\1.0.2903.40\lib_manual\net8.0-windows10.0.17763.0\Microsoft.Web.WebView2.Core.Projection.dll">
+      <PackagePath>Microsoft.Web.WebView2.Core.Projection.dll</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\bin\Debug\net8.0-windows10.0.19041.0\win-x64\App1.deps.json">
+      <PackagePath>App1.deps.json</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\a89bd3023999cb6ea6209ad6e0e3f82.jpg">
+      <PackagePath>Assets\a89bd3023999cb6ea6209ad6e0e3f82.jpg</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\ffmpeg-7.1.1-essentials_build\bin\ffmpeg.exe">
+      <PackagePath>Assets\ffmpeg-7.1.1-essentials_build\bin\ffmpeg.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\ffmpeg-7.1.1-essentials_build\bin\ffplay.exe">
+      <PackagePath>Assets\ffmpeg-7.1.1-essentials_build\bin\ffplay.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\ffmpeg-7.1.1-essentials_build\bin\ffprobe.exe">
+      <PackagePath>Assets\ffmpeg-7.1.1-essentials_build\bin\ffprobe.exe</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\ffmpeg-7.1.1-essentials_build\doc\bootstrap.min.css">
+      <PackagePath>Assets\ffmpeg-7.1.1-essentials_build\doc\bootstrap.min.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\ffmpeg-7.1.1-essentials_build\doc\community.html">
+      <PackagePath>Assets\ffmpeg-7.1.1-essentials_build\doc\community.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\ffmpeg-7.1.1-essentials_build\doc\default.css">
+      <PackagePath>Assets\ffmpeg-7.1.1-essentials_build\doc\default.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\ffmpeg-7.1.1-essentials_build\doc\developer.html">
+      <PackagePath>Assets\ffmpeg-7.1.1-essentials_build\doc\developer.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\ffmpeg-7.1.1-essentials_build\doc\faq.html">
+      <PackagePath>Assets\ffmpeg-7.1.1-essentials_build\doc\faq.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\ffmpeg-7.1.1-essentials_build\doc\fate.html">
+      <PackagePath>Assets\ffmpeg-7.1.1-essentials_build\doc\fate.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\ffmpeg-7.1.1-essentials_build\doc\ffmpeg-all.html">
+      <PackagePath>Assets\ffmpeg-7.1.1-essentials_build\doc\ffmpeg-all.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\ffmpeg-7.1.1-essentials_build\doc\ffmpeg-bitstream-filters.html">
+      <PackagePath>Assets\ffmpeg-7.1.1-essentials_build\doc\ffmpeg-bitstream-filters.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\ffmpeg-7.1.1-essentials_build\doc\ffmpeg-codecs.html">
+      <PackagePath>Assets\ffmpeg-7.1.1-essentials_build\doc\ffmpeg-codecs.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\ffmpeg-7.1.1-essentials_build\doc\ffmpeg-devices.html">
+      <PackagePath>Assets\ffmpeg-7.1.1-essentials_build\doc\ffmpeg-devices.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\ffmpeg-7.1.1-essentials_build\doc\ffmpeg-filters.html">
+      <PackagePath>Assets\ffmpeg-7.1.1-essentials_build\doc\ffmpeg-filters.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\ffmpeg-7.1.1-essentials_build\doc\ffmpeg-formats.html">
+      <PackagePath>Assets\ffmpeg-7.1.1-essentials_build\doc\ffmpeg-formats.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\ffmpeg-7.1.1-essentials_build\doc\ffmpeg-protocols.html">
+      <PackagePath>Assets\ffmpeg-7.1.1-essentials_build\doc\ffmpeg-protocols.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\ffmpeg-7.1.1-essentials_build\doc\ffmpeg-resampler.html">
+      <PackagePath>Assets\ffmpeg-7.1.1-essentials_build\doc\ffmpeg-resampler.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\ffmpeg-7.1.1-essentials_build\doc\ffmpeg-scaler.html">
+      <PackagePath>Assets\ffmpeg-7.1.1-essentials_build\doc\ffmpeg-scaler.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\ffmpeg-7.1.1-essentials_build\doc\ffmpeg-utils.html">
+      <PackagePath>Assets\ffmpeg-7.1.1-essentials_build\doc\ffmpeg-utils.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\ffmpeg-7.1.1-essentials_build\doc\ffmpeg.html">
+      <PackagePath>Assets\ffmpeg-7.1.1-essentials_build\doc\ffmpeg.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\ffmpeg-7.1.1-essentials_build\doc\ffplay-all.html">
+      <PackagePath>Assets\ffmpeg-7.1.1-essentials_build\doc\ffplay-all.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\ffmpeg-7.1.1-essentials_build\doc\ffplay.html">
+      <PackagePath>Assets\ffmpeg-7.1.1-essentials_build\doc\ffplay.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\ffmpeg-7.1.1-essentials_build\doc\ffprobe-all.html">
+      <PackagePath>Assets\ffmpeg-7.1.1-essentials_build\doc\ffprobe-all.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\ffmpeg-7.1.1-essentials_build\doc\ffprobe.html">
+      <PackagePath>Assets\ffmpeg-7.1.1-essentials_build\doc\ffprobe.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\ffmpeg-7.1.1-essentials_build\doc\general.html">
+      <PackagePath>Assets\ffmpeg-7.1.1-essentials_build\doc\general.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\ffmpeg-7.1.1-essentials_build\doc\git-howto.html">
+      <PackagePath>Assets\ffmpeg-7.1.1-essentials_build\doc\git-howto.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\ffmpeg-7.1.1-essentials_build\doc\libavcodec.html">
+      <PackagePath>Assets\ffmpeg-7.1.1-essentials_build\doc\libavcodec.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\ffmpeg-7.1.1-essentials_build\doc\libavdevice.html">
+      <PackagePath>Assets\ffmpeg-7.1.1-essentials_build\doc\libavdevice.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\ffmpeg-7.1.1-essentials_build\doc\libavfilter.html">
+      <PackagePath>Assets\ffmpeg-7.1.1-essentials_build\doc\libavfilter.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\ffmpeg-7.1.1-essentials_build\doc\libavformat.html">
+      <PackagePath>Assets\ffmpeg-7.1.1-essentials_build\doc\libavformat.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\ffmpeg-7.1.1-essentials_build\doc\libavutil.html">
+      <PackagePath>Assets\ffmpeg-7.1.1-essentials_build\doc\libavutil.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\ffmpeg-7.1.1-essentials_build\doc\libswresample.html">
+      <PackagePath>Assets\ffmpeg-7.1.1-essentials_build\doc\libswresample.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\ffmpeg-7.1.1-essentials_build\doc\libswscale.html">
+      <PackagePath>Assets\ffmpeg-7.1.1-essentials_build\doc\libswscale.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\ffmpeg-7.1.1-essentials_build\doc\mailing-list-faq.html">
+      <PackagePath>Assets\ffmpeg-7.1.1-essentials_build\doc\mailing-list-faq.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\ffmpeg-7.1.1-essentials_build\doc\nut.html">
+      <PackagePath>Assets\ffmpeg-7.1.1-essentials_build\doc\nut.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\ffmpeg-7.1.1-essentials_build\doc\platform.html">
+      <PackagePath>Assets\ffmpeg-7.1.1-essentials_build\doc\platform.html</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\ffmpeg-7.1.1-essentials_build\doc\style.min.css">
+      <PackagePath>Assets\ffmpeg-7.1.1-essentials_build\doc\style.min.css</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\ffmpeg-7.1.1-essentials_build\LICENSE">
+      <PackagePath>Assets\ffmpeg-7.1.1-essentials_build\LICENSE</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\ffmpeg-7.1.1-essentials_build\presets\libvpx-1080p.ffpreset">
+      <PackagePath>Assets\ffmpeg-7.1.1-essentials_build\presets\libvpx-1080p.ffpreset</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\ffmpeg-7.1.1-essentials_build\presets\libvpx-1080p50_60.ffpreset">
+      <PackagePath>Assets\ffmpeg-7.1.1-essentials_build\presets\libvpx-1080p50_60.ffpreset</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\ffmpeg-7.1.1-essentials_build\presets\libvpx-360p.ffpreset">
+      <PackagePath>Assets\ffmpeg-7.1.1-essentials_build\presets\libvpx-360p.ffpreset</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\ffmpeg-7.1.1-essentials_build\presets\libvpx-720p.ffpreset">
+      <PackagePath>Assets\ffmpeg-7.1.1-essentials_build\presets\libvpx-720p.ffpreset</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\ffmpeg-7.1.1-essentials_build\presets\libvpx-720p50_60.ffpreset">
+      <PackagePath>Assets\ffmpeg-7.1.1-essentials_build\presets\libvpx-720p50_60.ffpreset</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\ffmpeg-7.1.1-essentials_build\README.txt">
+      <PackagePath>Assets\ffmpeg-7.1.1-essentials_build\README.txt</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\LockScreenLogo.scale-200.png">
+      <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\SplashScreen.scale-200.png">
+      <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\Square150x150Logo.scale-200.png">
+      <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\Square44x44Logo.scale-200.png">
+      <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\StoreLogo.png">
+      <PackagePath>Assets\StoreLogo.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\Wide310x150Logo.scale-200.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Users\chenh\.nuget\packages\microsoft.windowsappsdk\1.7.250606001\buildTransitive\..\tools\MSIX\win10-x86\Microsoft.WindowsAppRuntime.1.7.msix">
+      <Name>Microsoft.WindowsAppRuntime.1.7</Name>
+      <Version>7000.522.1444.0</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.WindowsAppRuntime.1.7, MinVersion = 7000.522.1444.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\chenh\.nuget\packages\microsoft.windowsappsdk\1.7.250606001\buildTransitive\..\tools\MSIX\win10-x86\Microsoft.WindowsAppRuntime.1.7.msix</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Users\chenh\.nuget\packages\microsoft.windowsappsdk\1.7.250606001\buildTransitive\..\tools\MSIX\win10-x86\Microsoft.WindowsAppRuntime.1.7.msix">
+      <Name>Microsoft.WindowsAppRuntime.1.7</Name>
+      <Version>7000.522.1444.0</Version>
+      <Architecture>win32</Architecture>
+      <FrameworkIdentity>Name = Microsoft.WindowsAppRuntime.1.7, MinVersion = 7000.522.1444.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\chenh\.nuget\packages\microsoft.windowsappsdk\1.7.250606001\buildTransitive\..\tools\MSIX\win10-x86\Microsoft.WindowsAppRuntime.1.7.msix</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Users\chenh\.nuget\packages\microsoft.windowsappsdk\1.7.250606001\buildTransitive\..\tools\MSIX\win10-x64\Microsoft.WindowsAppRuntime.1.7.msix">
+      <Name>Microsoft.WindowsAppRuntime.1.7</Name>
+      <Version>7000.522.1444.0</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.WindowsAppRuntime.1.7, MinVersion = 7000.522.1444.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\chenh\.nuget\packages\microsoft.windowsappsdk\1.7.250606001\buildTransitive\..\tools\MSIX\win10-x64\Microsoft.WindowsAppRuntime.1.7.msix</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Users\chenh\.nuget\packages\microsoft.windowsappsdk\1.7.250606001\buildTransitive\..\tools\MSIX\win10-arm64\Microsoft.WindowsAppRuntime.1.7.msix">
+      <Name>Microsoft.WindowsAppRuntime.1.7</Name>
+      <Version>7000.522.1444.0</Version>
+      <Architecture>arm64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.WindowsAppRuntime.1.7, MinVersion = 7000.522.1444.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\chenh\.nuget\packages\microsoft.windowsappsdk\1.7.250606001\buildTransitive\..\tools\MSIX\win10-arm64\Microsoft.WindowsAppRuntime.1.7.msix</AppxLocation>
+      <MoreInfo></MoreInfo>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>

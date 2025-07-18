@@ -1,0 +1,275 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>PCAI</Machine>
+    <WindowsUser>chenh</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <TargetOsVersion>10.0</TargetOsVersion>
+    <TargetOsDescription>Windows 10.0</TargetOsDescription>
+    <SolutionConfiguration>Release|x64</SolutionConfiguration>
+    <PackageArchitecture>x64</PackageArchitecture>
+    <PackageIdentityName>c1bee580-46c2-48cd-8050-a80823d28ba9</PackageIdentityName>
+    <PackageIdentityPublisher>CN=wzwen</PackageIdentityPublisher>
+    <IntermediateOutputPath>D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\obj\x64\Release\net8.0-windows10.0.19041.0\win-x64\</IntermediateOutputPath>
+    <RemoteDeploymentType>CopyToDevice</RemoteDeploymentType>
+    <PackageRegistrationPath>
+    </PackageRegistrationPath>
+    <RemoveNonLayoutFiles>false</RemoveNonLayoutFiles>
+    <DeployOptionalPackages>false</DeployOptionalPackages>
+    <WindowsSdkPath>C:\Program Files %28x86%29\Windows Kits\10\</WindowsSdkPath>
+    <LayoutDir>D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\bin\x64\Release\net8.0-windows10.0.19041.0\win-x64\AppX</LayoutDir>
+    <RegisteredManifestChecksum>F9910874311952C0B246DDE4DBBD95B904E8C5D51C937931E57B6023D869C33B</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>c1bee580-46c2-48cd-8050-a80823d28ba9_1.0.0.0_x64__6kgxyzwmqy6de</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>c1bee580-46c2-48cd-8050-a80823d28ba9_6kgxyzwmqy6de!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>c1bee580-46c2-48cd-8050-a80823d28ba9</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=wzwen</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\bin\x64\Release\net8.0-windows10.0.19041.0\win-x64\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2025-07-07T08:00:21.570</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\bin\x64\Release\net8.0-windows10.0.19041.0\win-x64\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2025-07-07T07:50:37.282</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\bin\x64\Release\net8.0-windows10.0.19041.0\win-x64\App1.runtimeconfig.json">
+      <PackagePath>App1.runtimeconfig.json</PackagePath>
+      <Modified>2025-07-07T07:50:36.664</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\obj\x64\Release\net8.0-windows10.0.19041.0\win-x64\apphost.exe">
+      <PackagePath>App1.exe</PackagePath>
+      <Modified>2025-07-07T07:50:36.578</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.netcore.app.runtime.win-x64\8.0.17\runtimes\win-x64\native\Microsoft.DiaSymReader.Native.amd64.dll">
+      <PackagePath>Microsoft.DiaSymReader.Native.amd64.dll</PackagePath>
+      <Modified>2024-11-27T04:18:14.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.netcore.app.runtime.win-x64\8.0.17\runtimes\win-x64\native\System.IO.Compression.Native.dll">
+      <PackagePath>System.IO.Compression.Native.dll</PackagePath>
+      <Modified>2025-05-16T08:32:16.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.netcore.app.runtime.win-x64\8.0.17\runtimes\win-x64\native\clretwrc.dll">
+      <PackagePath>clretwrc.dll</PackagePath>
+      <Modified>2025-05-16T08:21:36.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.netcore.app.runtime.win-x64\8.0.17\runtimes\win-x64\native\clrgc.dll">
+      <PackagePath>clrgc.dll</PackagePath>
+      <Modified>2025-05-16T08:19:38.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.netcore.app.runtime.win-x64\8.0.17\runtimes\win-x64\native\clrjit.dll">
+      <PackagePath>clrjit.dll</PackagePath>
+      <Modified>2025-05-16T08:18:46.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.netcore.app.runtime.win-x64\8.0.17\runtimes\win-x64\native\coreclr.dll">
+      <PackagePath>coreclr.dll</PackagePath>
+      <Modified>2025-05-16T08:16:12.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.netcore.app.runtime.win-x64\8.0.17\runtimes\win-x64\native\createdump.exe">
+      <PackagePath>createdump.exe</PackagePath>
+      <Modified>2025-05-16T08:21:34.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.netcore.app.runtime.win-x64\8.0.17\runtimes\win-x64\native\hostfxr.dll">
+      <PackagePath>hostfxr.dll</PackagePath>
+      <Modified>2025-05-16T08:31:42.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.netcore.app.runtime.win-x64\8.0.17\runtimes\win-x64\native\hostpolicy.dll">
+      <PackagePath>hostpolicy.dll</PackagePath>
+      <Modified>2025-05-16T08:31:46.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.netcore.app.runtime.win-x64\8.0.17\runtimes\win-x64\native\mscordaccore.dll">
+      <PackagePath>mscordaccore.dll</PackagePath>
+      <Modified>2025-05-16T08:24:26.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.netcore.app.runtime.win-x64\8.0.17\runtimes\win-x64\native\mscordaccore_amd64_amd64_8.0.1725.26602.dll">
+      <PackagePath>mscordaccore_amd64_amd64_8.0.1725.26602.dll</PackagePath>
+      <Modified>2025-05-16T08:24:26.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.netcore.app.runtime.win-x64\8.0.17\runtimes\win-x64\native\mscordbi.dll">
+      <PackagePath>mscordbi.dll</PackagePath>
+      <Modified>2025-05-16T08:24:26.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.netcore.app.runtime.win-x64\8.0.17\runtimes\win-x64\native\mscorrc.dll">
+      <PackagePath>mscorrc.dll</PackagePath>
+      <Modified>2025-05-16T08:21:40.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.netcore.app.runtime.win-x64\8.0.17\runtimes\win-x64\native\msquic.dll">
+      <PackagePath>msquic.dll</PackagePath>
+      <Modified>2025-03-03T22:23:18.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.web.webview2\1.0.2903.40\runtimes\win-x64\native\WebView2Loader.dll">
+      <PackagePath>WebView2Loader.dll</PackagePath>
+      <Modified>2024-11-10T08:57:38.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.windowsappsdk\1.7.250606001\runtimes\win-x64\native\Microsoft.Windows.ApplicationModel.Background.UniversalBGTask.dll">
+      <PackagePath>Microsoft.Windows.ApplicationModel.Background.UniversalBGTask.dll</PackagePath>
+      <Modified>2025-06-05T21:49:12.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.windowsappsdk\1.7.250606001\runtimes\win-x64\native\Microsoft.WindowsAppRuntime.Bootstrap.dll">
+      <PackagePath>Microsoft.WindowsAppRuntime.Bootstrap.dll</PackagePath>
+      <Modified>2025-06-05T21:49:12.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\chenh\.nuget\packages\microsoft.web.webview2\1.0.2903.40\runtimes\win-x64\native_uap\Microsoft.Web.WebView2.Core.dll">
+      <PackagePath>Microsoft.Web.WebView2.Core.dll</PackagePath>
+      <Modified>2024-11-10T08:58:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\obj\x64\Release\net8.0-windows10.0.19041.0\win-x64\linked\System.ComponentModel.dll">
+      <PackagePath>System.ComponentModel.dll</PackagePath>
+      <Modified>2025-07-07T07:50:43.653</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\obj\x64\Release\net8.0-windows10.0.19041.0\win-x64\R2R\Microsoft.InteractiveExperiences.Projection.dll">
+      <PackagePath>Microsoft.InteractiveExperiences.Projection.dll</PackagePath>
+      <Modified>2025-07-07T07:50:44.645</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\obj\x64\Release\net8.0-windows10.0.19041.0\win-x64\R2R\Microsoft.WinUI.dll">
+      <PackagePath>Microsoft.WinUI.dll</PackagePath>
+      <Modified>2025-07-07T07:50:45.355</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\obj\x64\Release\net8.0-windows10.0.19041.0\win-x64\R2R\App1.dll">
+      <PackagePath>App1.dll</PackagePath>
+      <Modified>2025-07-07T07:50:46.053</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\obj\x64\Release\net8.0-windows10.0.19041.0\win-x64\R2R\System.Collections.Concurrent.dll">
+      <PackagePath>System.Collections.Concurrent.dll</PackagePath>
+      <Modified>2025-07-07T07:50:46.828</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\obj\x64\Release\net8.0-windows10.0.19041.0\win-x64\R2R\System.Collections.Immutable.dll">
+      <PackagePath>System.Collections.Immutable.dll</PackagePath>
+      <Modified>2025-07-07T07:50:47.544</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\obj\x64\Release\net8.0-windows10.0.19041.0\win-x64\R2R\System.Collections.dll">
+      <PackagePath>System.Collections.dll</PackagePath>
+      <Modified>2025-07-07T07:50:48.230</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\obj\x64\Release\net8.0-windows10.0.19041.0\win-x64\R2R\System.Diagnostics.StackTrace.dll">
+      <PackagePath>System.Diagnostics.StackTrace.dll</PackagePath>
+      <Modified>2025-07-07T07:50:48.943</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\obj\x64\Release\net8.0-windows10.0.19041.0\win-x64\R2R\System.IO.Compression.dll">
+      <PackagePath>System.IO.Compression.dll</PackagePath>
+      <Modified>2025-07-07T07:50:49.778</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\obj\x64\Release\net8.0-windows10.0.19041.0\win-x64\R2R\System.IO.MemoryMappedFiles.dll">
+      <PackagePath>System.IO.MemoryMappedFiles.dll</PackagePath>
+      <Modified>2025-07-07T07:50:50.488</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\obj\x64\Release\net8.0-windows10.0.19041.0\win-x64\R2R\System.Linq.Expressions.dll">
+      <PackagePath>System.Linq.Expressions.dll</PackagePath>
+      <Modified>2025-07-07T07:50:51.141</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\obj\x64\Release\net8.0-windows10.0.19041.0\win-x64\R2R\System.Linq.dll">
+      <PackagePath>System.Linq.dll</PackagePath>
+      <Modified>2025-07-07T07:50:51.863</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\obj\x64\Release\net8.0-windows10.0.19041.0\win-x64\R2R\System.ObjectModel.dll">
+      <PackagePath>System.ObjectModel.dll</PackagePath>
+      <Modified>2025-07-07T07:50:52.595</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\obj\x64\Release\net8.0-windows10.0.19041.0\win-x64\R2R\System.Private.CoreLib.dll">
+      <PackagePath>System.Private.CoreLib.dll</PackagePath>
+      <Modified>2025-07-07T07:50:53.960</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\obj\x64\Release\net8.0-windows10.0.19041.0\win-x64\R2R\System.Private.Uri.dll">
+      <PackagePath>System.Private.Uri.dll</PackagePath>
+      <Modified>2025-07-07T07:50:54.670</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\obj\x64\Release\net8.0-windows10.0.19041.0\win-x64\R2R\System.Reflection.Metadata.dll">
+      <PackagePath>System.Reflection.Metadata.dll</PackagePath>
+      <Modified>2025-07-07T07:50:55.379</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\obj\x64\Release\net8.0-windows10.0.19041.0\win-x64\R2R\System.Runtime.InteropServices.dll">
+      <PackagePath>System.Runtime.InteropServices.dll</PackagePath>
+      <Modified>2025-07-07T07:50:56.069</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\obj\x64\Release\net8.0-windows10.0.19041.0\win-x64\R2R\System.Security.Cryptography.dll">
+      <PackagePath>System.Security.Cryptography.dll</PackagePath>
+      <Modified>2025-07-07T07:50:56.738</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\obj\x64\Release\net8.0-windows10.0.19041.0\win-x64\R2R\Microsoft.Windows.SDK.NET.dll">
+      <PackagePath>Microsoft.Windows.SDK.NET.dll</PackagePath>
+      <Modified>2025-07-07T07:50:57.544</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\obj\x64\Release\net8.0-windows10.0.19041.0\win-x64\R2R\WinRT.Runtime.dll">
+      <PackagePath>WinRT.Runtime.dll</PackagePath>
+      <Modified>2025-07-07T07:50:58.384</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\obj\x64\Release\net8.0-windows10.0.19041.0\win-x64\App1.deps.json">
+      <PackagePath>App1.deps.json</PackagePath>
+      <Modified>2025-07-07T07:50:58.420</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\a89bd3023999cb6ea6209ad6e0e3f82.jpg">
+      <PackagePath>Assets\a89bd3023999cb6ea6209ad6e0e3f82.jpg</PackagePath>
+      <Modified>2025-07-06T10:11:52.287</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\LockScreenLogo.scale-200.png">
+      <PackagePath>Assets\LockScreenLogo.scale-200.png</PackagePath>
+      <Modified>2025-07-02T17:33:18.462</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\SplashScreen.scale-200.png">
+      <PackagePath>Assets\SplashScreen.scale-200.png</PackagePath>
+      <Modified>2025-07-02T17:33:18.462</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\Square150x150Logo.scale-200.png">
+      <PackagePath>Assets\Square150x150Logo.scale-200.png</PackagePath>
+      <Modified>2025-07-02T17:33:18.464</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\Square44x44Logo.scale-200.png">
+      <PackagePath>Assets\Square44x44Logo.scale-200.png</PackagePath>
+      <Modified>2025-07-02T17:33:18.465</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\Square44x44Logo.targetsize-24_altform-unplated.png">
+      <PackagePath>Assets\Square44x44Logo.targetsize-24_altform-unplated.png</PackagePath>
+      <Modified>2025-07-02T17:33:18.465</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\StoreLogo.png">
+      <PackagePath>Assets\StoreLogo.png</PackagePath>
+      <Modified>2025-07-02T17:33:18.466</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Wechat\xwechat_files\wxid_o6dr63e7eyvl22_fb48\msg\file\2025-07\App1\App1\Assets\Wide310x150Logo.scale-200.png">
+      <PackagePath>Assets\Wide310x150Logo.scale-200.png</PackagePath>
+      <Modified>2025-07-02T17:33:18.467</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+    <ResolvedSDKReference Include="C:\Users\chenh\.nuget\packages\microsoft.windowsappsdk\1.7.250606001\buildTransitive\..\tools\MSIX\win10-x86\Microsoft.WindowsAppRuntime.1.7.msix">
+      <Name>Microsoft.WindowsAppRuntime.1.7</Name>
+      <Version>7000.522.1444.0</Version>
+      <Architecture>x86</Architecture>
+      <FrameworkIdentity>Name = Microsoft.WindowsAppRuntime.1.7, MinVersion = 7000.522.1444.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\chenh\.nuget\packages\microsoft.windowsappsdk\1.7.250606001\buildTransitive\..\tools\MSIX\win10-x86\Microsoft.WindowsAppRuntime.1.7.msix</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Users\chenh\.nuget\packages\microsoft.windowsappsdk\1.7.250606001\buildTransitive\..\tools\MSIX\win10-x86\Microsoft.WindowsAppRuntime.1.7.msix">
+      <Name>Microsoft.WindowsAppRuntime.1.7</Name>
+      <Version>7000.522.1444.0</Version>
+      <Architecture>win32</Architecture>
+      <FrameworkIdentity>Name = Microsoft.WindowsAppRuntime.1.7, MinVersion = 7000.522.1444.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\chenh\.nuget\packages\microsoft.windowsappsdk\1.7.250606001\buildTransitive\..\tools\MSIX\win10-x86\Microsoft.WindowsAppRuntime.1.7.msix</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Users\chenh\.nuget\packages\microsoft.windowsappsdk\1.7.250606001\buildTransitive\..\tools\MSIX\win10-x64\Microsoft.WindowsAppRuntime.1.7.msix">
+      <Name>Microsoft.WindowsAppRuntime.1.7</Name>
+      <Version>7000.522.1444.0</Version>
+      <Architecture>x64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.WindowsAppRuntime.1.7, MinVersion = 7000.522.1444.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\chenh\.nuget\packages\microsoft.windowsappsdk\1.7.250606001\buildTransitive\..\tools\MSIX\win10-x64\Microsoft.WindowsAppRuntime.1.7.msix</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+    <ResolvedSDKReference Include="C:\Users\chenh\.nuget\packages\microsoft.windowsappsdk\1.7.250606001\buildTransitive\..\tools\MSIX\win10-arm64\Microsoft.WindowsAppRuntime.1.7.msix">
+      <Name>Microsoft.WindowsAppRuntime.1.7</Name>
+      <Version>7000.522.1444.0</Version>
+      <Architecture>arm64</Architecture>
+      <FrameworkIdentity>Name = Microsoft.WindowsAppRuntime.1.7, MinVersion = 7000.522.1444.0, Publisher = %27CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US%27</FrameworkIdentity>
+      <AppxLocation>C:\Users\chenh\.nuget\packages\microsoft.windowsappsdk\1.7.250606001\buildTransitive\..\tools\MSIX\win10-arm64\Microsoft.WindowsAppRuntime.1.7.msix</AppxLocation>
+      <MoreInfo>
+      </MoreInfo>
+    </ResolvedSDKReference>
+  </ItemGroup>
+</Project>
