@@ -1,0 +1,60 @@
+using System;
+using System.Diagnostics;
+using System.Threading.Tasks;
+
+namespace App1
+{
+    /// <summary>
+    /// 文件推流器，循环推流本地视频文件到指定推流地址，直到手动停止。
+    /// </summary>
+    public class Streamer
+    {
+        private Process? _ffmpegProcess;
+        private bool _isStreaming = false;
+        private string? _videoPath;
+        private string? _pushUrl;
+
+        /// <summary>
+        /// 启动循环推流。
+        /// </summary>
+        /// <param name="videoPath">本地视频文件路径</param>
+        /// <param name="pushUrl">推流地址（如RTMP）</param>
+        public void Start(string videoPath, string pushUrl)
+        {
+            _videoPath = videoPath;
+            _pushUrl = pushUrl;
+            _isStreaming = true;
+            Task.Run(() => LoopPush());
+        }
+
+        /// <summary>
+        /// 停止推流。
+        /// </summary>
+        public void Stop()
+        {
+            _isStreaming = false;
+            _ffmpegProcess?.Kill();
+        }
+
+        private void LoopPush()
+        {
+            while (_isStreaming)
+            {
+                var psi = new ProcessStartInfo
+                {
+                    FileName = "ffmpeg",
+                    Arguments = $"-re -stream_loop -1 -i \"{_videoPath}\" -c copy -f flv \"{_pushUrl}\"",
+                    UseShellExecute = false,
+                    RedirectStandardOutput = true,
+                    RedirectStandardError = true,
+                    CreateNoWindow = true
+                };
+                _ffmpegProcess = Process.Start(psi);
+                if (_ffmpegProcess != null)
+                {
+                    _ffmpegProcess.WaitForExit();
+                }
+            }
+        }
+    }
+}

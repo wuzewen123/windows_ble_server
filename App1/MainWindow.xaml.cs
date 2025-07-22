@@ -10,7 +10,7 @@ using System.Collections.Generic;
 using System.Threading.Tasks;
 using System.Text;
 using System.Linq;
-
+using System.Text.Json.Nodes;
 
 namespace App1
 {
@@ -36,11 +36,15 @@ namespace App1
         // 录制计时器
         private RecordingTimer? recordingTimer;
         
+        // API服务
+        private ApiService apiService;
+        
         // 设备信息查询事件类型
         private int lastDeviceQueryEvent = 0; // 默认为获取设备信息
         
         // 全局设备状态
         private string device_status = "idle"; // idle, recording, paused
+        private List<Dictionary<string, string>> recordingDataList = new List<Dictionary<string, string>>();
         
         // 获取当前传输状态
         public bool IsFileTransferInProgress
@@ -187,6 +191,9 @@ namespace App1
             // 初始化录制计时器
             InitializeRecordingTimer();
             
+            // 初始化API服务
+            apiService = new ApiService();
+            
             // 初始化UI状态
             UpdateLogMessage("应用程序已启动");
         }
@@ -202,6 +209,8 @@ namespace App1
             
             recordingTimer.RecordingStarted += (startTime) => {
                 device_status = "recording";
+                // 不再清空recordingDataList，保留历史录制数据
+                // recordingDataList.Clear(); // 清空列表开始新录制
                 UpdateLogMessage($"[录制计时] 录制开始于: {startTime:yyyy-MM-dd HH:mm:ss}");
                 UpdateLogMessage($"[设备状态] 状态更新为: {device_status}");
             };
@@ -408,12 +417,132 @@ namespace App1
                                 bool isRecording = recordingTimer?.IsRecording ?? false;
                                 string formattedDuration = isRecording ? (recordingTimer?.GetFormattedDuration() ?? "00:00:00") : "00:00:00";
                                 UpdateLogMessage($"获取录制时长信息: 时长={formattedDuration}");
-                                json = $"{{\"errorcode\":0,\"msg\":\"success\",\"data\":\"{formattedDuration}\"}}";
+                                json = $"{{\"errorcode\":0,\"msg\":\"success\",\"data\":{{\"duration\":\"{formattedDuration}\"}}}}";
                             }
                             else if(lastDeviceQueryEvent == 2)
                             {
-                                UpdateLogMessage($"获取设备状态: {device_status}");
-                                json = $"{{\"errorcode\":0,\"msg\":\"success\",\"data\":{{\"characteristic_id\":\"{uuid}\",\"device_status\":\"{device_status}\"}}"; 
+                                UpdateLogMessage($"获取设备状态: {device_status} 设备信息列表数量：{recordingDataList.Count}");
+                                
+                                // 记录更详细的列表信息
+                                if (recordingDataList.Count > 0)
+                                {
+                                    foreach (var dict in recordingDataList)
+                                    {
+                                        foreach (var key in dict.Keys)
+                                        {
+                                            UpdateLogMessage($"[设备信息] 列表包含ID: {key}");
+                                        }
+                                    }
+                                }
+                                else
+                                {
+                                    UpdateLogMessage($"[设备信息] 列表为空");
+                                }
+                                
+                                if (device_status != "idle" && recordingDataList.Count > 0)
+                                {
+                                    // 设备正在录制中，需要返回录制数据给客户端以恢复界面
+                                    // 获取最近的一条录制数据
+                                    var latestRecording = recordingDataList.LastOrDefault();
+                                    if (latestRecording != null)
+                                    {
+                                        string id = latestRecording.Keys.FirstOrDefault() ?? "unknown";
+                                        if (latestRecording.TryGetValue(id, out string jsonData))
+                                        {
+                                            try
+                                                {
+                                                    // 解析存储的JSON数据
+                                                    var jsonNode = JsonNode.Parse(jsonData);
+                                                    if (jsonNode[id] is JsonObject dataObj)
+                                                    {
+                                                        try
+                                                        {
+                                                            // 构建返回给客户端的JSON
+                                                            // 使用ToJsonString()和Parse创建深拷贝，避免"The node already has a parent"错误
+                                                            var dataObjCopy = JsonNode.Parse(dataObj.ToJsonString()).AsObject();
+                                                            var typeValue = dataObjCopy["type"] == null ? "null" : $"\"{ dataObjCopy["type"]}\"";
+                                                            json = $"{{\"errorcode\":0,\"msg\":\"success\",\"data\":{{" +
+                                                                  $"\"characteristic_id\":\"{uuid}\"," +
+                                                                  $"\"device_status\":\"{device_status}\"," +
+                                                                  $"\"title\":\"{dataObjCopy["title"]}\"," +
+                                                                  $"\"myteam\":\"{dataObjCopy["myteam"]}\"," +
+                                                                  $"\"opponentteam\":\"{dataObjCopy["opponentteam"]}\"," +
+                                                                  $"\"address\":\"{dataObjCopy["address"]}\"," +
+                                                                  $"\"type\":{typeValue}," +
+                                                                  $"\"status\":\"{dataObjCopy["status"]}\"," +
+                                                                  $"\"starttime\":\"{dataObjCopy["starttime"]}\"," +
+                                                                  $"\"id\":\"{id}\"" +
+                                                                  $"}}}}";
+                                                            UpdateLogMessage($"返回录制数据给客户端以恢复界面: {json}");
+                                                        }
+                                                        catch (Exception ex)
+                                                        {
+                                                            UpdateLogMessage($"[错误] 构建JSON失败: {ex.Message}");
+                                                            json = $"{{\"errorcode\":0,\"msg\":\"success\",\"data\":{{\"characteristic_id\":\"{uuid}\",\"device_status\":\"{device_status}\"}}}}";
+                                                        }
+                                                    }
+                                                    else
+                                                    {
+                                                        UpdateLogMessage($"无法解析录制数据的data对象，尝试直接解析JSON");
+                                                        // 尝试直接解析JSON，可能是旧格式
+                                                        var directJsonNode = JsonNode.Parse(jsonData);
+                                                        if (directJsonNode is JsonObject directDataObj)
+                                                        {
+                                                            try
+                                                            {
+                                                                // 使用ToJsonString()和Parse创建深拷贝，避免"The node already has a parent"错误
+                                                                var directDataObjCopy = JsonNode.Parse(directDataObj.ToJsonString()).AsObject();
+                                                                var typeValue = directDataObjCopy["type"] == null ? "null" : $"\"{ directDataObjCopy["type"]}\"";
+                                                                json = $"{{\"errorcode\":0,\"msg\":\"success\",\"data\":{{" +
+                                                                      $"\"characteristic_id\":\"{uuid}\"," +
+                                                                      $"\"device_status\":\"{device_status}\"," +
+                                                                      $"\"title\":\"{directDataObjCopy["title"]}\"," +
+                                                                      $"\"myteam\":\"{directDataObjCopy["myteam"]}\"," +
+                                                                      $"\"opponentteam\":\"{directDataObjCopy["opponentteam"]}\"," +
+                                                                      $"\"address\":\"{directDataObjCopy["address"]}\"," +
+                                                                      $"\"type\":{typeValue}," +
+                                                                      $"\"status\":\"{directDataObjCopy["status"]}\"," +
+                                                                      $"\"starttime\":\"{directDataObjCopy["starttime"]}\"," +
+                                                                      $"\"id\":\"{id}\"" +
+                                                                      $"}}}}";
+                                                                UpdateLogMessage($"返回录制数据给客户端以恢复界面(直接解析): {json}");
+                                                            }
+                                                            catch (Exception ex)
+                                                            {
+                                                                UpdateLogMessage($"[错误] 构建JSON失败(直接解析): {ex.Message}");
+                                                                json = $"{{\"errorcode\":0,\"msg\":\"success\",\"data\":{{\"characteristic_id\":\"{uuid}\",\"device_status\":\"{device_status}\"}}}}";
+                                                            }
+                                                        }
+                                                        else
+                                                        {
+                                                            UpdateLogMessage($"无法解析录制数据");
+                                                            json = $"{{\"errorcode\":0,\"msg\":\"success\",\"data\":{{\"characteristic_id\":\"{uuid}\",\"device_status\":\"{device_status}\"}}}}";
+                                                        }
+                                                    }
+                                                }
+                                            catch (Exception ex)
+                                            {
+                                                UpdateLogMessage($"解析录制数据失败: {ex.Message}");
+                                                json = $"{{\"errorcode\":0,\"msg\":\"success\",\"data\":{{\"characteristic_id\":\"{uuid}\",\"device_status\":\"{device_status}\"}}}}";
+                                            }
+                                        }
+                                        else
+                                        {
+                                            UpdateLogMessage($"未找到ID为{id}的录制数据");
+                                            json = $"{{\"errorcode\":0,\"msg\":\"success\",\"data\":{{\"characteristic_id\":\"{uuid}\",\"device_status\":\"{device_status}\"}}}}";
+                                        }
+                                    }
+                                    else
+                                    {
+                                        UpdateLogMessage($"recordingDataList为空，无法恢复录制数据");
+                                        json = $"{{\"errorcode\":0,\"msg\":\"success\",\"data\":{{\"characteristic_id\":\"{uuid}\",\"device_status\":\"{device_status}\"}}}}";
+                                    }
+                                }
+                                else
+                                {
+                                    // 设备空闲状态，返回基本信息
+                                    json = $"{{\"errorcode\":0,\"msg\":\"success\",\"data\":{{\"characteristic_id\":\"{uuid}\",\"device_status\":\"{device_status}\"}}}}";
+                                } 
 
                             }
                             break;
@@ -557,6 +686,7 @@ namespace App1
                                         // 尝试解析录制事件
                                         if (RecordingEventData.TryParse(dataStr, out var recordingEvent) && recordingEvent != null)
                                         {
+
                                             // 检查此特征码是获取信息或获取时间或者设备状态
                                             if (sender.Uuid.ToString().ToLower() == "6f8d0b2c-4e1a-3c5d-7b9e-0f2a4c6e8b1d")
                                             {
@@ -577,7 +707,7 @@ namespace App1
                                                 {
                                                     lastDeviceQueryEvent = 2;
                                                     DispatcherQueue.TryEnqueue(() => {
-                                                        UpdateLogMessage($"[时间查询] 收到获取录制时间请求，已设置查询类型为录制时间");
+                                                        UpdateLogMessage($"[恢复信息查询] 收到获取恢复信息请求，已设置查询类型为恢复信息");
                                                     });
                                                 }
                                             }
@@ -606,12 +736,58 @@ namespace App1
                                                             {
                                                                 UpdateLogMessage($"[录制计时] 启动计时器失败: {ex.Message}");
                                                             }
+                                                            // 添加 status 到 data 对象并存储 JSON
+                                                            try
+                                                            {
+                                                                var jsonNode = JsonNode.Parse(dataStr);
+                                                                if (jsonNode["data"] is JsonObject dataObj)
+                                                                {
+                                                                    // 创建dataObj的深拷贝，避免"The node already has a parent"错误
+                                                                    var dataObjCopy = JsonNode.Parse(dataObj.ToJsonString()).AsObject();
+                                                                    dataObjCopy["upload_status"] = false;
+                                                                    var id = dataObjCopy["id"]?.ToString() ?? "unknown";
+                                                                    var newObj = new JsonObject { [id] = dataObjCopy };
+                                                                    string newJson = newObj.ToJsonString();
+                                                                    // 检查是否已存在相同id的数据，确保唯一性
+                                                                    bool idExists = recordingDataList.Any(dict => dict.ContainsKey(id));
+                                                                    if (idExists)
+                                                                    {
+                                                                        UpdateLogMessage($"[录制数据] ID: {id} 已存在，更新现有数据");
+                                                                        // 找到并更新现有数据
+                                                                        var existingDict = recordingDataList.First(dict => dict.ContainsKey(id));
+                                                                        existingDict[id] = newJson;
+                                                                    }
+                                                                    else
+                                                                    {
+                                                                        // 添加新数据
+                                                                        UpdateLogMessage($"[录制数据] 添加 id: {id} 到列表");
+                                                                        var newDict = new Dictionary<string, string> { [id] = newJson };
+                                                                        recordingDataList.Add(newDict);
+                                                                        UpdateLogMessage($"[录制数据] 添加后列表数量: {recordingDataList.Count}");
+                                                                        
+                                                                        // 记录当前列表中的所有ID
+                                                                        UpdateLogMessage($"[录制数据] 当前列表中的所有ID:");
+                                                                        foreach (var dict in recordingDataList)
+                                                                        {
+                                                                            foreach (var dictKey in dict.Keys)
+                                                                            {
+                                                                                UpdateLogMessage($"[录制数据] - ID: {dictKey}");
+                                                                            }
+                                                                        }
+                                                                    }
+                                                                    UpdateLogMessage($"[录制数据] 已记录修改后的 start_recording JSON 到列表 (以 id 为键，data 为值，添加 upload_status: false): {newJson}");
+                                                                }
+                                                            }
+                                                            catch (Exception ex)
+                                                            {
+                                                                UpdateLogMessage($"[错误] 添加 status 到 JSON 失败: {ex.Message}");
+                                                            }
                                                         });
                                                     }
                                                     break;
                                                     
                                                 case "stop_recording":
-                                                    DispatcherQueue.TryEnqueue(() => {
+                                                    DispatcherQueue.TryEnqueue(async () => {
                                                         UpdateLogMessage($"[停止录制] 收到停止录制事件");
                                                         
                                                         // 停止录制计时器
@@ -621,6 +797,18 @@ namespace App1
                                                             {
                                                                 var totalDuration = recordingTimer.StopRecording();
                                                                 UpdateLogMessage($"[录制计时] 计时器已停止，总录制时长: {recordingTimer.GetFormattedDuration()}");
+                                                                
+                                                                // 调用后端API结束录制
+                                                                if (currentId > 0)
+                                                                {
+                                                                    UpdateLogMessage($"[API] 正在调用结束录制接口，ID: {currentId}");
+                                                                    var response = await apiService.EndRecordingAsync(currentId);
+                                                                    UpdateLogMessage($"[API] 结束录制接口调用结果: {(response.Success ? "成功" : "失败")} - {response.Message}");
+                                                                }
+                                                                else
+                                                                {
+                                                                    UpdateLogMessage($"[API] 无法调用结束录制接口：录制ID无效");
+                                                                }
                                                             }
                                                             else
                                                             {
@@ -635,7 +823,7 @@ namespace App1
                                                     break;
                                                     
                                                 case "pause_recording":
-                                                    DispatcherQueue.TryEnqueue(() => {
+                                                    DispatcherQueue.TryEnqueue(async () => {
                                                         UpdateLogMessage($"[暂停录制] 收到暂停录制事件");
                                                         
                                                         // 暂停录制计时器
@@ -645,6 +833,18 @@ namespace App1
                                                             {
                                                                 recordingTimer.PauseRecording();
                                                                 UpdateLogMessage($"[录制计时] 计时器已暂停，当前录制时长: {recordingTimer.GetFormattedDuration()}");
+                                                                
+                                                                // 调用后端API暂停录制
+                                                                if (currentId > 0)
+                                                                {
+                                                                    UpdateLogMessage($"[API] 正在调用暂停录制接口，ID: {currentId}");
+                                                                    var response = await apiService.PauseRecordingAsync(currentId);
+                                                                    UpdateLogMessage($"[API] 暂停录制接口调用结果: {(response.Success ? "成功" : "失败")} - {response.Message}");
+                                                                }
+                                                                else
+                                                                {
+                                                                    UpdateLogMessage($"[API] 无法调用暂停录制接口：录制ID无效");
+                                                                }
                                                             }
                                                             else
                                                             {
@@ -659,7 +859,7 @@ namespace App1
                                                     break;
                                                     
                                                 case "continue_recording":
-                                                    DispatcherQueue.TryEnqueue(() => {
+                                                    DispatcherQueue.TryEnqueue(async () => {
                                                         UpdateLogMessage($"[恢复录制] 收到恢复录制事件");
                                                         
                                                         // 恢复录制计时器
@@ -669,6 +869,18 @@ namespace App1
                                                             {
                                                                 recordingTimer.ResumeRecording();
                                                                 UpdateLogMessage($"[录制计时] 计时器已恢复，当前录制时长: {recordingTimer.GetFormattedDuration()}");
+                                                                
+                                                                // 调用后端API继续录制
+                                                                if (currentId > 0)
+                                                                {
+                                                                    UpdateLogMessage($"[API] 正在调用继续录制接口，ID: {currentId}");
+                                                                    var response = await apiService.RestartRecordingAsync(currentId);
+                                                                    UpdateLogMessage($"[API] 继续录制接口调用结果: {(response.Success ? "成功" : "失败")} - {response.Message}");
+                                                                }
+                                                                else
+                                                                {
+                                                                    UpdateLogMessage($"[API] 无法调用继续录制接口：录制ID无效");
+                                                                }
                                                             }
                                                             else
                                                             {

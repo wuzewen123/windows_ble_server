@@ -62,6 +62,8 @@
 ## 3、开始录制
 服务 UUID
 特征码 8B7F1A2C-3E4D-4B8A-9C1E-2F6D7A8B9COD
+获取到推流地址后启动设备，把数据流推流到服务器
+
 
 ## 4、暂停录制
 服务 UUID
@@ -97,4 +99,26 @@ ffmpeg -re -stream_loop -1 -i input.mp4 -c:v libx264 -preset veryfast -c:a aac -
 
 拉流
 ffmpeg -i "rtmp://oneshot.live.jkxuetang.com/live/267?auth_key=1752753592-0-0-0ae826cf6efe3146fdd391f36c905c9d" -c copy output.flv
+
+
+## VideoPusher 类使用说明
+
+VideoPusher 类用于基于 FFmpeg 实现视频推流功能。
+
+### 使用示例
+
+```csharp
+// using System.Threading.Tasks;
+
+// var pusher = new VideoPusher();
+// await pusher.StartPushingAsync("input.mp4", "rtmp://example.com/live/stream", true);
+
+// 停止推流
+// pusher.StopPushing();
+```
+
+- `StartPushingAsync`: 开始推流，支持循环。
+- `StopPushing`: 停止推流。
+
+确保 FFmpeg 可执行文件位于 Assets/ffmpeg-7.1.1-essentials_build/bin/ffmpeg.exe。
 
